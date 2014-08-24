@@ -1,4 +1,4 @@
-== book_library [![Code Climate](https://codeclimate.com/github/brandonlafave/book_library/badges/gpa.svg)](https://codeclimate.com/github/brandonlafave/book_library)
+book_library [![Code Climate](https://codeclimate.com/github/brandonlafave/book_library/badges/gpa.svg)](https://codeclimate.com/github/brandonlafave/book_library) [![Build Status](https://travis-ci.org/brandonlafave/book_library.svg?branch=master)](https://travis-ci.org/brandonlafave/book_library)
 =========
 This README would normally document whatever steps are necessary to get the
 application up and running.
