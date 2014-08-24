@@ -1,5 +1,5 @@
-== README
-
+== book_library [![Code Climate](https://codeclimate.com/github/brandonlafave/book_library/badges/gpa.svg)](https://codeclimate.com/github/brandonlafave/book_library)
+=========
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
