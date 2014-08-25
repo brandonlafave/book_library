@@ -12,6 +12,7 @@ gem 'rubocop', require: false
 gem 'rspec-rails'
 gem 'devise'
 gem 'omniauth-github'
+gem 'twitter-bootstrap-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
