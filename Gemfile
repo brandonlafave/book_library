@@ -13,6 +13,7 @@ gem 'rspec-rails'
 gem 'devise'
 gem 'omniauth-github'
 gem 'twitter-bootstrap-rails'
+gem 'will_paginate'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
