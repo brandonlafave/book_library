@@ -14,6 +14,10 @@ gem 'devise'
 gem 'omniauth-github'
 gem 'twitter-bootstrap-rails'
 gem 'will_paginate'
+gem 'ransack'
+gem 'carrierwave'
+gem 'rmagick', '2.13.2'
+gem 'mini_magick', '3.8.0'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'

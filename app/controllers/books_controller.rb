@@ -4,7 +4,9 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.order(sort_column + " " + sort_direction).paginate(:per_page => 5, :page => params[:page])
+    @search = Book.search(params[:q])
+    @book = @search.result
+    @book = Book.order(sort_column + " " + sort_direction).paginate(:per_page => 5, :page => params[:page])
   end
 
   # GET /books/1

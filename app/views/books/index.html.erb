@@ -1,5 +1,11 @@
 <h1>Listing books</h1>
-
+<%= search_form_for @search do |f| %>
+  <div class="field">
+    <%= f.label :title_cont, "Title contains" %>
+    <%= f.text_field :title_cont %>
+  </div>
+  <div class="actions"><%= f.submit "Search" %></div>
+<% end %>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -16,9 +22,9 @@
   </thead>
 
   <tbody>
-    <% @books.each do |book| %>
+    <% @book.each do |book| %>
       <tr>
-        <td><%= book.cover %></td>
+        <td><%= image_tag book.cover_url(:thumb) if book.cover? %></td>
         <td><%= book.title %></td>
         <td><%= book.author %></td>
         <td><%= book.rating %></td>
@@ -33,7 +39,7 @@
     <% end %>
   </tbody>
 </table>
-<%= will_paginate @books %>
+<%= will_paginate @book %>
 <br>
 
 <%= link_to 'New Book', new_book_path %>

@@ -2,7 +2,7 @@
 
 <p>
   <strong>Cover:</strong>
-  <%= @book.cover %>
+  <%= image_tag @book.cover_url if @book.cover? %>
 </p>
 
 <p>
