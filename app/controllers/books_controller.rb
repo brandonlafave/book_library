@@ -1,11 +1,10 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
-
+  helper_method :sort_column, :sort_direction
   # GET /books
   # GET /books.json
   def index
-    @books = Book.all
-    @books = Book.paginate(:per_page => 5, :page => params[:page])
+    @books = Book.order(sort_column + " " + sort_direction).paginate(:per_page => 5, :page => params[:page])
   end
 
   # GET /books/1
@@ -71,5 +70,13 @@ class BooksController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
       params.require(:book).permit(:cover, :title, :author, :rating, :isbn, :approved, :active, :following, :created_at, :updated_at)
+    end
+
+    def sort_column
+    Book.column_names.include?(params[:sort]) ? params[:sort] : "title"
+    end
+  
+    def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
     end
 end
