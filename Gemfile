@@ -7,6 +7,9 @@ gem 'rails', '4.1.4'
 group :development, :test do
 	gem 'sqlite3'
 end
+group :production do
+	gem 'pg'
+end
 # Added gems
 gem 'simplecov', :require => false, :group => :test
 gem 'rubocop', require: false
