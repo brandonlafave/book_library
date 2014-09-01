@@ -4,8 +4,9 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-
+group :development, :test do
+	gem 'sqlite3'
+end
 # Added gems
 gem 'simplecov', :require => false, :group => :test
 gem 'rubocop', require: false
@@ -18,6 +19,7 @@ gem 'ransack'
 gem 'carrierwave'
 gem 'rmagick', '2.13.2'
 gem 'mini_magick', '3.8.0'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
